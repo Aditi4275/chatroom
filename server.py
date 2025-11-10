@@ -72,6 +72,10 @@ async def handle_client(reader: asyncio.StreamReader, writer: asyncio.StreamWrit
             if not data:
                 break
             message = data.decode().strip()
+            if message == "WHO":
+                for user in clients:
+                    writer.write(f"USER {user}\n".encode())
+                await writer.drain()
             if message.startswith("MSG "):
                 text = message[4:].strip()
                 if text:
