@@ -29,3 +29,6 @@ Open another terminal and use `nc` (netcat):
 ```
 nc localhost 4000
 ```
+## Video 
+https://github.com/user-attachments/assets/d949bcdf-24eb-43cb-8775-d748ccd24f8a
+
